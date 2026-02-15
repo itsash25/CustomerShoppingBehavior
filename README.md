@@ -1,114 +1,56 @@
-📊 Customer Shopping Analysis – Power BI Dashboard
-🔍 Project Overview
+# Customer Shopping Behaviour Analysis (Power BI)
 
-This project presents an end-to-end analysis of customer shopping behavior using Power BI.
-The dashboard provides insights into revenue performance, customer demographics, subscription behavior, discount impact, and payment preferences to support data-driven business decisions.
+## 📌 Project Overview
+This project analyzes customer shopping behaviour using transactional retail data to uncover insights about customer segments, subscription impact, discounts, demographics, and purchasing patterns. The goal is to support data-driven decisions for marketing, retention, and sales strategy.
 
-🧠 Business Objectives
+## 🛠️ Tools & Technologies
+- Power BI (Data modeling, DAX, Dashboarding)
+- SQL (Data validation & exploration – optional)
+- Excel / CSV (Source data)
 
-Identify top revenue-generating product categories
+## 📊 Key KPIs
+- Total Customers: 3.9K  
+- Average Purchase Amount: $59.76  
+- Average Customer Rating: 3.75  
 
-Analyze customer behavior across demographics (age group, gender, location)
+## 📈 Dashboard Features
+- Customer distribution by Subscription Status (Yes/No)
+- Sales by Category (Clothing, Accessories, Footwear, Outerwear)
+- Revenue comparison: Discount vs No Discount
+- Sales by Age Group (Young, Adults, Middle-Aged)
+- Customer segmentation by Previous Purchases:
+  - New
+  - Returning
+  - Loyal
+- Interactive filters:
+  - Subscription Status  
+  - Gender  
+  - Shipping Type  
+  - Category  
 
-Understand the impact of discounts and promo codes on revenue
+## 🧠 Customer Segmentation Logic
+Customers were segmented based on the `previous_purchases` column:
+- New: Low or zero previous purchases  
+- Returning: Moderate purchase history  
+- Loyal: High number of previous purchases  
 
-Evaluate subscription vs non-subscription customer contribution
+> Note: The dataset did not include an explicit repeat-customer flag, so customer types were engineered using purchase history.
 
-Highlight customer loyalty patterns using purchase frequency
+## 🔍 Key Insights
+- Majority of customers fall under the Loyal segment, contributing to a stable revenue base.
+- Non-subscribed customers form a larger share of the customer base.
+- Clothing and Accessories generate the highest sales volume.
+- Adult and Middle-Aged customers contribute significantly more revenue than younger customers.
+- Orders without discounts generate higher total revenue compared to discounted orders.
 
-🛠️ Tools & Technologies
+## 📁 Repository Structure
+- /data → Raw dataset  
+- /powerbi → Power BI (.pbix) file  
+- /images → Dashboard screenshots  
+- README.md  
 
-Power BI Desktop – Data modeling, DAX, and dashboard creation
-
-Power Query – Data cleaning and transformation
-
-DAX – KPI calculations
-
-Excel / CSV – Data source
-
-GitHub – Project versioning and sharing
-
-📌 Key KPIs
-
-Total Customers
-
-Total Revenue
-
-Average Purchase Amount
-
-Average Rating
-
-Average Purchase Frequency
-
-📊 Dashboard Pages
-Page 1 – Interactive Analysis
-
-Revenue by Category
-
-Revenue by Discount Applied
-
-Revenue by Age Group
-
-Customers by Subscription Status
-
-Payment Method Preferences
-
-Slicers for Category, Gender, Shipping Type, and Subscription Status
-
-Page 2 – Insights & Recommendations
-
-Summarizes key findings and actionable business recommendations for stakeholders.
-
-🧠 Key Insights
-
-Clothing is the highest revenue-generating category.
-
-Non-subscribers form the majority of the customer base, indicating a strong conversion opportunity.
-
-Adult and middle-aged customers contribute most to total revenue.
-
-Full-price purchases generate higher revenue compared to discounted sales.
-
-PayPal and Credit Card are the most preferred payment methods.
-
-🎯 Recommendations
-
-Focus marketing efforts on top-performing categories (Clothing & Accessories).
-
-Design targeted campaigns to convert non-subscribers into subscribers.
-
-Optimize checkout experience for popular payment methods.
-
-Re-evaluate discount strategies to balance revenue growth and margins.
-
-⚠️ Assumptions & Limitations
-
-Dataset primarily represents repeat customers (purchase_frequency > 1).
-
-New vs repeat customer analysis is limited by data availability.
-
-Revenue is analyzed per transaction; customer lifetime value is not included.
-
-📁 Files in This Repository
-
-Customer_Shopping_Dashboard.pbix – Power BI dashboard file
-
-customer_shopping_behavior.csv – Source dataset
-
-dashboard_screenshots/ – Dashboard images (if added)
-
-README.md – Project documentation
-
-▶️ How to Use
-
-Download the .pbix file
-
-Open it using Power BI Desktop
-
-Interact with slicers to explore insights
-
-🙌 Author
-
-Ashutosh Malge
-Aspiring Data Analyst
-(Power BI | SQL | Excel)
+## 🚀 Future Improvements
+- Add time-series analysis (monthly/quarterly trends)
+- Include churn or retention metrics
+- Build a customer lifetime value (CLV) estimate
+- Add cohort analysis for repeat purchases
